@@ -168,8 +168,9 @@ public static void main(String[] args) {
     StringBuilder str1 = new StringBuilder(input1);
     System.out.println(str1.reverse());
     //Q.17 allow user to input numbers and print the largest one
-    int ragem;
+     int ragem;
     int largest = 0;
+    int lowest = 0;
     String answer2;
     do {
         System.out.println("Q.17 Enter the number: ");
@@ -179,9 +180,12 @@ public static void main(String[] args) {
         answer2 = scanner.nextLine();
         if (ragem > largest) {
             largest = ragem;
+        } else if (ragem < lowest){
+            lowest = ragem;
         }
     } while (!answer2.equals("no"));
     System.out.println(largest + " is the largest");
+    System.out.println(lowest + " is the lowest ");
     //Q.18 Determine a number of character appears in a word
     System.out.println("Q.18 please enter a word : ");
     String userWord = scanner.nextLine();
